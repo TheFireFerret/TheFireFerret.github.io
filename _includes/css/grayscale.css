@@ -308,7 +308,7 @@ a:focus {
     /*border: 1px solid {{ site.color.links }};*/
     border: 1px solid #ffffff;
     outline: 0;
-    color: {{ site.color.primary-dark }};
+    color: #ffffff
     background-color: {{ site.color.links }};
 }
 
