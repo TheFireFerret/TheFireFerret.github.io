@@ -4,3 +4,5 @@ _includes/.DS_Store
 _layouts/.DS_Store
 
 .DS_Store
+
+_site/
