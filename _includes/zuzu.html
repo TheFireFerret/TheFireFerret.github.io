@@ -2,16 +2,16 @@
 
         <script type="text/javascript">
             window.addEventListener('load', function() {
-                fetch('https://www.instagram.com/zuzu.aussie/?__a=1', {mode: 'cors'})
+                fetch('https://www.instagram.com/graphql/query/?query_hash=472f257a40c653c64c666ce877d59d2b&variables={"id":"29289526446","first":5}', {mode: 'cors'})
                 .then(function (response) {
                     if (response.ok) {
                         return response.json();
                     }
                     return Promise.reject(response);
                 }).then(function (data) {
-                    const numPosts = data['graphql']['user']['edge_owner_to_timeline_media']['edges'].length
+                    const numPosts = data['data']['user']['edge_owner_to_timeline_media']['edges'].length
                     const random = Math.floor(Math.random() * numPosts);
-                    const mostRecentPost = data['graphql']['user']['edge_owner_to_timeline_media']['edges'][random.toString()]['node']['display_url']
+                    const mostRecentPost = data['data']['user']['edge_owner_to_timeline_media']['edges'][random.toString()]['node']['display_url']
 
                     document.getElementById("zuzu_img").src = mostRecentPost;
                 })
