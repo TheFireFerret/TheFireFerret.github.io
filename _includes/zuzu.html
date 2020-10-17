@@ -2,7 +2,7 @@
 
         <script type="text/javascript">
             window.addEventListener('load', function() {
-                fetch('https://www.instagram.com/zuzu.aussie/?__a=1')
+                fetch('https://www.instagram.com/zuzu.aussie/?__a=1', {mode: 'cors'})
                 .then(function (response) {
                     if (response.ok) {
                         return response.json();
