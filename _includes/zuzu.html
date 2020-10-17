@@ -14,6 +14,10 @@
                     const mostRecentPost = data['graphql']['user']['edge_owner_to_timeline_media']['edges'][random.toString()]['node']['display_url']
 
                     document.getElementById("zuzu_img").src = mostRecentPost;
+                })
+                .catch(function (error) {
+                    console.warn(error);
+                    document.getElementById("zuzu_img").src = "img/zuzu.jpg";
                 });
 
             });
@@ -37,7 +41,7 @@
         </style>
 
         <a class="imgbox" href="https://www.instagram.com/zuzu.aussie/">
-            <img id="zuzu_img" src="img/zuzu.jpg" class="center-fit" alt="zuzu" />
+            <img id="zuzu_img" class="center-fit" alt="zuzu" />
         </a>
 
     </section>
